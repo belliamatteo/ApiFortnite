@@ -12,3 +12,18 @@ app.use('/public', express.static(path.join(__dirname, 'static')));
 app.get('/', function(req,res){
     res.sendFile(path.join(__dirname + '/static/index.html'))
 });
+
+var uri = 'https://api.fortnitetracker.com/v1/profile/';
+app.post('/', function(req,res){
+    request.get(uri + 'platform' + '/' + 'epicusername',{
+        headers : {
+            'TRN-Api-Key' : '3dd263e6-311c-4b96-bf12-fc6aebb3487e'
+        }, function(error,response,body){
+            console.body(body);
+            res.json(body);
+        }
+    })
+})
+
+var port = process.env.PORT || 3000;
+app.listen(port);

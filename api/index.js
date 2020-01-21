@@ -18,7 +18,7 @@ app.post('/', function(req,res){
     console.log(req.body);
     request.get(uri + req.body.DropDownValue + '/' + req.body.epicNickName,{
         headers : {
-            'TRN-Api-Key' : 'a768e120-a23b-4880-a2a3-fdbdda42c52a'
+            'TRN-Api-Key' : '3dd263e6-311c-4b96-bf12-fc6aebb3487e'
         }}, function(error,response,body){
             console.body(body);
             res.json(body);

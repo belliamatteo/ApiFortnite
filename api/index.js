@@ -15,15 +15,15 @@ app.get('/', function(req,res){
 
 var uri = 'https://api.fortnitetracker.com/v1/profile/';
 app.post('/', function(req,res){
-    request.get(uri + 'platform' + '/' + 'epicusername',{
+    console.log(req.body);
+    request.get(uri + req.body.DropDownValue + '/' + req.body.epicNickName,{
         headers : {
-            'TRN-Api-Key' : '3dd263e6-311c-4b96-bf12-fc6aebb3487e'
-        }, function(error,response,body){
+            'TRN-Api-Key' : 'a768e120-a23b-4880-a2a3-fdbdda42c52a'
+        }}, function(error,response,body){
             console.body(body);
             res.json(body);
-        }
-    })
-})
+        });
+});
 
 var port = process.env.PORT || 3000;
 app.listen(port);

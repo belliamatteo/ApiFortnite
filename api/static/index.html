@@ -14,16 +14,31 @@
         <div class = "row">
             <div class = "col-lg-3"></div>
             <div class = "col-lg-6"></div>
+            <div class="input-group">
+                <input type="text" id = "epicNickName" class="form-control" aria-label="Text input with segmented dropdown button">
+                <div class="input-group-append">
+                    <button type="button" id = "submit" class="btn btn-outline-secondary">Submit</button>
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" id = "platform">
+                        <a class="dropdown-item" href="#">Pc</a>
+                        <a class="dropdown-item" href="#">Xbl</a>
+                        <a class="dropdown-item" href="#">Psn</a>
+                    </div>
+                </div>
+            </div>
             <div class = "col-lg-3"></div>
         </div>
         <div class = "row">
             <div class = "col-lg-3"></div>
-            <div class = "col-lg-6"></div>
+            <div class = "col-lg-6" id = "results"></div>
             <div class = "col-lg-3"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src = "public/fotnitetracker.js"></script>
 </body>
 </html>
